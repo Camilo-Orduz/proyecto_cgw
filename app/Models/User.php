@@ -23,10 +23,15 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+    protected $table = 'empleado';
+    protected $primaryKey = 'identificacionEmpleado';
     protected $fillable = [
-        'name',
+        'tipoDocumentoId ',
+        'nombresEmpleado',
+        'apellidosEmpleado',
+        'telefonoEmpleado',
         'email',
-        'password',
+        'password'
     ];
 
     /**
