@@ -21,6 +21,13 @@ Route::get('/login', function () {
     return view('front.entrada');
 });
 
+Route::get('/Mi pedido', function () {
+    return view('front.mi_pedido');
+});
+
+Route::get('/registro', function () {
+    return view('front.register');
+});
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
