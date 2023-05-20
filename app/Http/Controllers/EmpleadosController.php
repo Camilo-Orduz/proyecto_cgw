@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Empleado;
+use App\Models\User;
+use App\Models\tipo_documento;
 
 class EmpleadosController extends Controller
 {
-    //Crear empleado
-    public function store(Request $Request){
-        try{
-            $empleado = Empleado::create($Request->all());
-            return response()->json($empleado,201);
-        }catch (\Throwable $th){
-            return response()->json([
-                'errors' => $th
-            ], 400);
-        }
+    //crear Empleado
+    public function crearE(){
+        $documentos = tipo_documento::all();
+        return view('front.register', compact('documentos'));
+    }
+
+    public function storeE(Request $request){
+        User::create($request->all());
+        return redirect()->route('login');
     }
 }

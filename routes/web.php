@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmpleadosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,15 +20,18 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('front.entrada');
-});
+})->name('login');
 
 Route::get('/Mi pedido', function () {
     return view('front.mi_pedido');
 });
 
-Route::get('/registro', function () {
-    return view('front.register');
-});
+//Creacion de empleado
+Route::get('/registro', [EmpleadosController::class, 'crearE'])->name('empleados_crear');
+Route::post('registro', [EmpleadosController::class, 'storeE'])->name('empleados_C');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
