@@ -30,3 +30,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+//Rutas de prueba
+Route::post('empleados', [EmpleadosController::class, 'store']);
