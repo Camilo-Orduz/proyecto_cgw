@@ -25,16 +25,14 @@
         <form>
         <div class="input-holder">
         <h3 id="title">Registrar</h3>
-        <label for="exampleDataList" class="form-label">Tipo de documento</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecciona tu tipo de documento">
-                <datalist id="datalistOptions">
-                    <option value="Cédula">
-                    <option value="Veneco">
-                    <option value="TI">
-                    <option value="Alcaparra">
-                    <option value=":v">
-                </datalist> <br>
-                <label for="exampleDataList" class="form-label">ID</label> 
+        <label for="exampleDataList" class="form-label">Tipo de documento</label> 
+            <select class="form-select" aria-label="Tipo de documento">
+                <option selected>ID</option>
+                <option value="1">CC</option>
+                <option value="2">TI</option>
+                <option value="3">CDE</option> 
+</select>
+                <br><label for="exampleDataList" class="form-label">ID</label> 
                 <input class="form-control" type="number" placeholder="Número de cédula" aria-label="default input example"><br>
                 <label for="exampleDataList" class="form-label">Nombres</label> 
                 <input class="form-control" type="text" placeholder="Nombres" aria-label="default input example"><br>
