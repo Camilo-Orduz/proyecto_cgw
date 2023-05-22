@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('empleado', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->unsignedInteger('tipoDocumentoId');
             $table->foreign('tipoDocumentoId')->references('idTipoDocumento')->on('tipo_documento')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('identificacionEmpleado');
+            $table->unsignedBigInteger('identificacionEmpleado')->unique();
             $table->primary('identificacionEmpleado');
             $table->string('nombresEmpleado');
             $table->string('apellidosEmpleado');

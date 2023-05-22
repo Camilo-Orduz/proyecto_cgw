@@ -21,7 +21,7 @@ class CreateRegistroDeActividadTable extends Migration
             $table->foreign('pedidoId')->references('idPedido')->on('pedido')->onUpdate('cascade')->onDelete('cascade');
 
             $table->unsignedBigInteger('empleadoId');
-            $table->foreign('empleadoId')->references('identificacionEmpleado')->on('empleado')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('empleadoId')->references('identificacionEmpleado')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
             
             $table->unsignedInteger('estadoPedidoId');

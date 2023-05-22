@@ -18,7 +18,7 @@ class CreatePedidoTable extends Migration
             $table->unsignedBigInteger('clienteIdentificacion');
             $table->foreign('clienteIdentificacion')->references('identificacionCliente')->on('cliente')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedBigInteger('empleadoIdentificacion');
-            $table->foreign('empleadoIdentificacion')->references('identificacionEmpleado')->on('empleado')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('empleadoIdentificacion')->references('identificacionEmpleado')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->dateTime('fechaRadicacionPedido');
             $table->dateTime('fechaEntregaEstimada');
             $table->double('totalPedido', 10, 2);

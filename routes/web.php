@@ -24,11 +24,12 @@ Route::get('/login', function () {
 
 Route::get('/Mi pedido', function () {
     return view('front.mi_pedido');
-});
+})->name('index');
 
 //Creacion de empleado
 Route::get('/registro', [EmpleadosController::class, 'crearE'])->name('empleados_crear');
 Route::post('registro', [EmpleadosController::class, 'storeE'])->name('empleados_C');
+Route::post('login', [EmpleadosController::class, 'loginE'])->name('login_empleado');
 
 
 
@@ -41,7 +42,3 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
-
-//Rutas de prueba
-Route::post('empleados', [EmpleadosController::class, 'store']);

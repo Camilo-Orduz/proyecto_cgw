@@ -24,27 +24,30 @@
       <div class="login-info">
         <form method="POST" action="{{ route('empleados_C') }}">
           @csrf
+          @include('front.messages')
         <div class="input-holder">
         <h3 id="title">Registrar Empleado</h3>
         <label for="exampleDataList" class="form-label">Tipo de documento</label> 
-            <select name="tipoDocumentoId" class="form-select" aria-label="Tipo de documento">
+            <select name="tipoDocumentoId" class="form-select" aria-label="Tipo de documento" required>
               <option value="">--Escoja el Tipo de Documento del Empleado</option>
               @foreach ($documentos as $documento)
                   <option value="{{ $documento['idTipoDocumento']}}">{{$documento['siglaDocumento']}}</option>
               @endforeach
               </select>
                 <br><label for="exampleDataList" class="form-label">Número De Identificación</label> 
-                <input name="identificacionEmpleado" class="form-control" type="number" placeholder="Número" aria-label="default input example"><br>
+                <input name="identificacionEmpleado" class="form-control" type="number" placeholder="Número" aria-label="default input example" required><br>
                 <label for="exampleDataList" class="form-label">Nombres</label> 
-                <input class="form-control" type="text" placeholder="Nombres" aria-label="default input example" name="nombresEmpleado"><br>
+                <input class="form-control" type="text" placeholder="Nombres" aria-label="default input example" name="nombresEmpleado" required><br>
                 <label for="exampleDataList" class="form-label">Apellidos</label> 
-                <input class="form-control" type="text" placeholder="Apellidos" aria-label="default input example" name="apellidosEmpleado"><br>
+                <input class="form-control" type="text" placeholder="Apellidos" aria-label="default input example" name="apellidosEmpleado" required><br>
                 <label for="exampleDataList" class="form-label">Celular</label> 
-                <input class="form-control" type="number" placeholder="Celular" aria-label="default input example" name="telefonoEmpleado"><br>
+                <input class="form-control" type="number" placeholder="Celular" aria-label="default input example" name="telefonoEmpleado" required><br>
                 <label for="exampleDataList" class="form-label">Correo</label> 
-                <input class="form-control" type="email" placeholder="Correo" aria-label="default input example" name="email"><br>
+                <input class="form-control" type="email" placeholder="Correo" aria-label="default input example" name="email" required><br>
                 <label for="exampleDataList" class="form-label">Contraseña</label> 
-                <input name="password" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example"><br> <br>
+                <input name="password" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example" required><br>
+                <label for="exampleDataList" class="form-label">Confirmar Contraseña</label> 
+                <input name="password_confirmation" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example" required><br> <br>
       <button type="submit" class="btn btn-outline-success">Registrar</button>
       </div>
       </form>
