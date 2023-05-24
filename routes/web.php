@@ -21,8 +21,12 @@ Route::get('/login', function () {
     return view('front.entrada');
 });
 
-Route::get('/Mi pedido', function () {
+Route::get('/Mipedido', function () {
     return view('front.mi_pedido');
+})->name('index');
+
+Route::get('inicio', function () {
+    return view('front.lobby');
 });
 
 Route::get('/registro', function () {
@@ -37,3 +41,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
