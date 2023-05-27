@@ -19,7 +19,7 @@
               </a>
               <ul class="nav justify-content-end">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="{{url('/Mi pedido')}}" style="color:black ;">¿Como está mi pedido?</a>
+                  <a class="nav-link active" aria-current="page" href="{{url('/Mipedido')}}" style="color:black ;">¿Como está mi pedido?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{url('/login')}}" style="color:black ;">Entrar</a>
