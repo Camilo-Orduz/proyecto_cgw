@@ -12,7 +12,7 @@
   <header class="cabeza">
     <nav class="navbar navbar-light bg-light" style="background-color:#f0f7da!important;">
         <div class="container-fluid" >
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{url('/')}}">
             <img src="{{url ('img/img/logo_golden.png') }}" alt="" width="30" height="24" class="d-inline-block align-text-top">
             Confecciones Golden
           </a>
@@ -83,7 +83,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2023 Copyright:
-      <a class="text-dark" href="#" style="color:white!important;">ConfeccionesGolden.com</a>
+      <a class="text-dark" href="{{url('/')}}" style="color:white!important;">ConfeccionesGolden.com</a>
     </div>
     <!-- Copyright -->
   </footer>

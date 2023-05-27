@@ -13,16 +13,16 @@
     <header class="cabeza">
         <nav class="navbar navbar-light bg-light "style="background-color:#f0f7da!important;">
             <div class="container-fluid" >
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="{{url('/')}}">
                 <img src="{{url ('img/img/logo_golden.png') }}" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 Confecciones Golden
               </a>
               <ul class="nav justify-content-end">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" style="color:black ;">¿Como está mi pedido?</a>
+                  <a class="nav-link active" aria-current="page" href="{{url('/Mi pedido')}}" style="color:black ;">¿Como está mi pedido?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" style="color:black ;">Entrar</a>
+                    <a class="nav-link active" aria-current="page" href="{{url('/login')}}" style="color:black ;">Entrar</a>
                   </li>
             </ul>
             </div>
@@ -31,7 +31,7 @@
     <!--3 Imagenes-->
     <div class="texto-simple">¿Quienes somos?</div>
     <div class="ajuste">
-    <div class="row" class="contenedor-img" class="imagenes-triple"">
+    <div class="row" class="contenedor-img" class="imagenes-triple">
         <div class="col-md-4"><img src="{{url('img/img/maquina.jpg') }}" class="img-fluid rounded" alt="choza fea" class="hover-img"></div>
         <div class="col-md-4"><img src="{{url('img/img/ropa-deportiva-3.jpg') }}" class="img-fluid rounded" alt="choza fea" class="hover-img"></div>
         <div class="col-md-4"><img src="{{url('img/img/uniforme-2.jpg') }}" class="img-fluid rounded" alt="choza fea" class="hover-img"></div>
@@ -102,7 +102,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2023 Copyright:
-      <a class="text-dark" href="#" style="color:white!important;">ConfeccionesGolden.com</a>
+      <a class="text-dark" href="{{url('/')}}" style="color:white!important;">ConfeccionesGolden.com</a>
     </div>
     <!-- Copyright -->
   </footer>
