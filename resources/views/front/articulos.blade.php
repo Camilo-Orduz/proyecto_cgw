@@ -65,7 +65,7 @@
                     <button type="button" class="btn btn-outline-success">Eliminar</button>
                     </div>
                     </div>
-
+                        <!-- Sesión de imagenes únicamente imagenes 500x500 -->
                         <div class="container-articles" id="contenedor-articulos">
                             <div class="row col-md-12" id="articulos-img">
                                 <div class="col-md-3" id="articulos">
