@@ -22,22 +22,24 @@
       </nav>
 </header> <br><br>
       <div class="login-info">
-        <form>
+        <form method="POST" action="{{ route('login_empleado') }}">
+          @csrf
+          @include('front.messages')
         <div class="input-holder">
         <h3 id="title">Login</h3>
     <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
-          <input type="text"  class="form-control"  placeholder="email@ejemplo.com">
+          <input name="email" type="email"  class="form-control"  placeholder="email@ejemplo.com" requiered>
         </div>
       </div>
       <div class="mb-3 row">
         <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword" placeholder="**********">
+          <input name="password" type="password" class="form-control" id="inputPassword" placeholder="**********" requiered>
         </div>
       </div>
-      <button type="button" class="btn btn-outline-success">Entrar</button>
+      <button type="submit" class="btn btn-outline-success">Entrar</button>
       </form>
       </div>
       </div>

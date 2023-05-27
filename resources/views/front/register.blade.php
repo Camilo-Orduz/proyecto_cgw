@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front</title>
+    <title>Registrar Empleado</title>
     <link rel="stylesheet" href="{{ url('libs/css/css/register.css') }}">
     <link rel="stylesheet" href="{{ url('libs/libs/bootstrap-5.0.2-dist/css/bootstrap.css') }}">
 </head>
@@ -22,27 +22,33 @@
       </nav>
 </header> <br><br>
       <div class="login-info">
-        <form>
+        <form method="POST" action="{{ route('empleados_C') }}">
+          @csrf
+          @include('front.messages')
         <div class="input-holder">
-        <h3 id="title">Registrar</h3>
+        <h3 id="title">Registrar Empleado</h3>
         <label for="exampleDataList" class="form-label">Tipo de documento</label> 
-            <select class="form-select" aria-label="Tipo de documento">
-                <option selected>ID</option>
-                <option value="1">CC</option>
-                <option value="2">TI</option>
-                <option value="3">CDE</option> 
-</select>
-                <br><label for="exampleDataList" class="form-label">ID</label> 
-                <input class="form-control" type="number" placeholder="Número de cédula" aria-label="default input example"><br>
+            <select name="tipoDocumentoId" class="form-select" aria-label="Tipo de documento" required>
+              <option value="">--Escoja el Tipo de Documento del Empleado</option>
+              @foreach ($documentos as $documento)
+                  <option value="{{ $documento['idTipoDocumento']}}">{{$documento['siglaDocumento']}}</option>
+              @endforeach
+              </select>
+                <br><label for="exampleDataList" class="form-label">Número De Identificación</label> 
+                <input name="identificacionEmpleado" class="form-control" type="number" placeholder="Número" aria-label="default input example" required><br>
                 <label for="exampleDataList" class="form-label">Nombres</label> 
-                <input class="form-control" type="text" placeholder="Nombres" aria-label="default input example"><br>
+                <input class="form-control" type="text" placeholder="Nombres" aria-label="default input example" name="nombresEmpleado" required><br>
                 <label for="exampleDataList" class="form-label">Apellidos</label> 
-                <input class="form-control" type="text" placeholder="Apellidos" aria-label="default input example"><br>
-                <label for="exampleDataList" class="form-label">Telefono</label> 
-                <input class="form-control" type="number" placeholder="Apellidos" aria-label="default input example"><br>
+                <input class="form-control" type="text" placeholder="Apellidos" aria-label="default input example" name="apellidosEmpleado" required><br>
+                <label for="exampleDataList" class="form-label">Celular</label> 
+                <input class="form-control" type="number" placeholder="Celular" aria-label="default input example" name="telefonoEmpleado" required><br>
                 <label for="exampleDataList" class="form-label">Correo</label> 
-                <input class="form-control" type="email" placeholder="Apellidos" aria-label="default input example"><br> <br>
-      <button type="button" class="btn btn-outline-success">Registrar</button>
+                <input class="form-control" type="email" placeholder="Correo" aria-label="default input example" name="email" required><br>
+                <label for="exampleDataList" class="form-label">Contraseña</label> 
+                <input name="password" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example" required><br>
+                <label for="exampleDataList" class="form-label">Confirmar Contraseña</label> 
+                <input name="password_confirmation" class="form-control" type="password" placeholder="Contraseña" aria-label="default input example" required><br> <br>
+      <button type="submit" class="btn btn-outline-success">Registrar</button>
       </div>
       </form>
       </div>

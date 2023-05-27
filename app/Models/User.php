@@ -23,10 +23,16 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+    protected $table = 'users';
+    protected $primaryKey = 'identificacionEmpleado';
     protected $fillable = [
-        'name',
+        'tipoDocumentoId',
+        'identificacionEmpleado',
+        'nombresEmpleado',
+        'apellidosEmpleado',
+        'telefonoEmpleado',
         'email',
-        'password',
+        'password'
     ];
 
     /**
@@ -58,4 +64,8 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function setPasswordAttribute($value){
+        $this->attributes['password'] = bcrypt($value);
+    }
 }
