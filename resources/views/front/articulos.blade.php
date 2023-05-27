@@ -18,11 +18,11 @@
                     <span class="fs-5 d-none d-sm-inline" style="color:black;">Panel</span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                        <a href="{{url('inicio-articulos')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <a href="{{url('inicio')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline" style="color:black;">Dashboard</span> </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-0 align-middle">
+                        <a href="{{url('inicio-articulos')}}" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline" style="color:black;">Articulos</span></a>
                     </li>
                     <li>
