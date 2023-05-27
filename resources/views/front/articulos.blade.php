@@ -70,12 +70,15 @@
                             <div class="row col-md-12" id="articulos-img">
                                 <div class="col-md-3" id="articulos">
                                     <img src="{{url('img/img/uniforme-1art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                    <center>Cantidad:</center>
                                 </div>
                                 <div class="col-md-3" id="articulos">
                                     <img src="{{url('img/img/uniforme-2art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                    <center>Cantidad:</center>
                                 </div>
                                 <div class="col-md-3" id="articulos">
                                     <img src="{{url('img/img/uniforme-3art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                    <center>Cantidad:</center>
                                 </div>
                             </div>
                         </div>
@@ -83,12 +86,15 @@
                             <div class="row col-md-12" id="articulos-img">
                                 <div class="col-md-3" id="articulos">
                                     <img src="{{url('img/img/uniforme-4art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                    <center>Cantidad:</center>
                                 </div>
                                 <div class="col-md-3" id="articulos">
                                     <img src="{{url('img/img/uniforme-5art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                    <center>Cantidad:</center>
                                 </div>
                                 <div class="col-md-3" id="articulos">
                                     <img src="{{url('img/img/uniforme-6art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                    <center>Cantidad:</center>
                                 </div>
                             </div>
                         </div>
