@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front</title>
-    <link rel="stylesheet" href="{{ url('libs/css/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url('libs/css/css/articles.css') }}">
     <link rel="stylesheet" href="{{ url('libs/libs/bootstrap-5.0.2-dist/css/bootstrap.css') }}">    
 </head>
 <body>
@@ -56,67 +56,43 @@
             </div>
         </div>
         <div class="col py-3">
-            <!-- Imagenes de el lobby -->
-            <div class="container">
-                    <div class="row">
-                        <div class="col" id="empleado">
-                        Empleados <br><br>  
-                        <div class="elemntos-emp">
-                            # 
-                        </div>
-                        </div>
-                        <div class="col">
-                        Clientes<br><br>
-                        <div class="elemntos-emp">
-                           # 
-                        </div>
-                        </div>
-                        <div class="col">
-                        Pedidos<br><br>
-                        <div class="elemntos-emp">
-                            #
-                        </div>
-                        </div>
+                <!-- contenido interno -->
+                <center><h2>Articulos</h2></center>
+                <div class="button-space">
+                    <div class="col-md-5" >
+                    <button type="button" class="btn btn-outline-success">Agregar</button>
+                    <button type="button" class="btn btn-outline-success">Editar</button>
+                    <button type="button" class="btn btn-outline-success">Eliminar</button>
                     </div>
+                    </div>
+
+                        <div class="container-articles" id="contenedor-articulos">
+                            <div class="row col-md-12" id="articulos-img">
+                                <div class="col-md-3" id="articulos">
+                                    <img src="{{url('img/img/uniforme-1art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                </div>
+                                <div class="col-md-3" id="articulos">
+                                    <img src="{{url('img/img/uniforme-2art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                </div>
+                                <div class="col-md-3" id="articulos">
+                                    <img src="{{url('img/img/uniforme-3art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-articles" id="contenedor-articulos">
+                            <div class="row col-md-12" id="articulos-img">
+                                <div class="col-md-3" id="articulos">
+                                    <img src="{{url('img/img/uniforme-4art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                </div>
+                                <div class="col-md-3" id="articulos">
+                                    <img src="{{url('img/img/uniforme-5art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                </div>
+                                <div class="col-md-3" id="articulos">
+                                    <img src="{{url('img/img/uniforme-6art.jpg') }}" class="img-fluid rounded" alt="Uniforme" class="hover-img">
+                                </div>
+                            </div>
+                        </div>
                 </div>
-                <br><br><br>
-                <!-- Tabla con datos generales -->
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th>Nuevos Pedidos</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                            </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                    </table>
             </div>
         </div>
     </div>
