@@ -31,6 +31,10 @@ Route::get('inicio', function () {
     return view('front.lobby');
 });
 
+Route::get('inicio-articulos', function () {
+    return view('front.articulos');
+});
+
 //Creacion de empleado
 Route::get('/registro', [EmpleadosController::class, 'crearE'])->name('empleados_crear');
 Route::post('registro', [EmpleadosController::class, 'storeE'])->name('empleados_C');
