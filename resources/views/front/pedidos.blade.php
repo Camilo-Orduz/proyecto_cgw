@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front</title>
-    <link rel="stylesheet" href="{{ url('libs/css/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url('libs/css/css/pedidos.css') }}">
     <link rel="stylesheet" href="{{ url('libs/libs/bootstrap-5.0.2-dist/css/bootstrap.css') }}">    
 </head>
 <body>
@@ -56,67 +56,44 @@
             </div>
         </div>
         <div class="col py-3">
-            <!-- Imagenes de el lobby -->
-            <div class="container">
-                    <div class="row">
-                        <div class="col" id="empleado">
-                        Empleados <br><br>  
-                        <div class="elemntos-emp">
-                            # 
-                        </div>
-                        </div>
-                        <div class="col">
-                        Clientes<br><br>
-                        <div class="elemntos-emp">
-                           # 
-                        </div>
-                        </div>
-                        <div class="col">
-                        Pedidos<br><br>
-                        <div class="elemntos-emp">
-                            #
-                        </div>
-                        </div>
+                <!--Contenido-->
+                <h1>Listado de pedidos</h1>
+                    <div class="button-add-rep">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Agregar pedido</button>
+                        <button class="btn btn-primary" type="button">Imprimir pedido</button>
                     </div>
-                </div>
-                <br><br><br>
-                <!-- Tabla con datos generales -->
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th>Nuevos Pedidos</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                    </div>
+                    <!--Tabla de contenido-->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
                             </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                    </table>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                        </table>
             </div>
         </div>
     </div>
