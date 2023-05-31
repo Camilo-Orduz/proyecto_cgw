@@ -29,7 +29,7 @@ Route::get('/Mipedido', function () {
 
 Route::get('inicio', function () {
     return view('front.lobby');
-});
+})->name('lobby');
 
 Route::get('inicio-articulos', function () {
     return view('front.articulos');

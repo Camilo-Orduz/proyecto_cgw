@@ -31,7 +31,7 @@ class EmpleadosController extends Controller
         if (Auth::attempt($credentials)) {
             // Las credenciales son válidas, el usuario está autenticado.
             // Puedes redirigirlo a la página deseada.
-            return redirect()->route('index');
+            return redirect()->route('lobby');
         }
     
         // Las credenciales no son válidas, el inicio de sesión falló.
